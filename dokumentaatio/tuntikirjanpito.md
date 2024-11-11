@@ -1,7 +1,5 @@
-#Työaikakirjanpito
+# Työaikakirjanpito
 
 | **päivä** | **aika** | **mitä tein**                                         |
 |-----------|----------|-------------------------------------------------------|
 |   8.11    |    3     | Vaatimusmäärittely                                    |
-|           |          |                                                       |
-|           |          |                                                       |
