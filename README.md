@@ -2,4 +2,6 @@
 
 Harjoitustyötä en ole vielä päättänyt, mutta *alustavasti* olen tekemässä **ToDoApp** 
 
-[Linkki laskareihin](laskarit)
+- [Laskarit](laskarit)
+- [Vaatimusmäärittely](dokumentaatio/vaatimusmaarittely.md)
+- [Tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)
