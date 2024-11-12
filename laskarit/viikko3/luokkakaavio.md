@@ -14,12 +14,12 @@
     Ruutu <|-- Asemat
     Ruutu <|-- Laitokset
     Ruutu <|-- Katu : normaali
-    Ruutu "1" -- "1" Aloitusruutu
-    Ruutu "10" -- "1" Vankila
+    Ruutu "1" -- "1" Aloitusruutu : sijainti
+    Ruutu "10" -- "1" Vankila : sijainti
     Ruutu "1" -- "1" Toiminto
     Sattuma "1" -- "1" Kortti: toiminto
     Yhteismaa "1" -- "1" Kortti: toiminto
-    Toiminto "1" -- "1" Useanlaisia
+    Toiminto "1" -- "*" Useanlaisia
     Katu "1" -- "0..4" Talo : mahdollinen
     Katu "1" -- "0..1" Hotelli : mahdollinen
     Katu "0..*" -- "1" Pelaaja : omistaja
