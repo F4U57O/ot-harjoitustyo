@@ -9,9 +9,11 @@
     Pelaaja "2..8" -- "1" Monopolipeli
     Ruutu <|-- Aloitusruutu
     Ruutu <|-- Vankila
-    Ruutu <|-- Sattuma ja yhteismaa
-    Ruutu <|-- Asemat ja laitokset
-    Ruutu <|-- Normaalit kadut
+    Ruutu <|-- Sattuma
+    Ruutu <|-- Yhteismaa
+    Ruutu <|-- Asemat
+    Ruutu <|-- Laitokset
+    Ruutu <|-- Katu : normaali
     Ruutu "1" -- "1" Aloitusruutu
     Ruutu "10" -- "1" Vankila
     Ruutu "1" -- "1" Toiminto
