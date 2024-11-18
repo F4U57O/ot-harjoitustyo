@@ -1,7 +1,6 @@
 from database_connection import get_database_connection
 
-def drop_tables():
-  connection = get_database_connection()
+def drop_tables(connection):
   cursor = connection.cursor()
 
   cursor.execute('''
@@ -9,10 +8,8 @@ def drop_tables():
   ''')
 
   connection.commit()
-  connection.close()
 
-def create_tables():
-  connection = get_database_connection()
+def create_tables(connection):
   cursor = connection.cursor()
 
   cursor.execute('''
@@ -24,13 +21,13 @@ def create_tables():
   ''')
 
   connection.commit()
-  connection.close()
 
 def initialize_database():
   connection = get_database_connection()
 
-  drop_tables()
-  create_tables()
+  drop_tables(connection)
+  create_tables(connection)
+  connection.close()
 
 if __name__ == "__main__":
   initialize_database()
