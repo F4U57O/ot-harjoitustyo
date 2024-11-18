@@ -3,5 +3,5 @@ __pycache__
 .coverage
 htmlcov
 
-data/oma_tietokanta.sqlite
-data/test-tietokanta.sqlite
+data/database.sqlite
+data/test-database.sqlite

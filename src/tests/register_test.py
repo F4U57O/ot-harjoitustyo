@@ -29,5 +29,7 @@ class TestRegister(unittest.TestCase):
       fail, message = self.register.register_user("same_user", "password")
       self.assertFalse(fail)
       self.assertEqual(message, "Käyttäjätunnus on jo käytössä")
+
+
        
 
