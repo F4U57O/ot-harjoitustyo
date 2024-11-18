@@ -1,6 +1,6 @@
 from database_connection import get_database_connection
 
-def drop_tables(connection):
+def drop_tables():
   connection = get_database_connection()
   cursor = connection.cursor()
 
@@ -11,7 +11,7 @@ def drop_tables(connection):
   connection.commit()
   connection.close()
 
-def create_tables(connection):
+def create_tables():
   connection = get_database_connection()
   cursor = connection.cursor()
 
