@@ -18,3 +18,4 @@
   - "Kesto:"-kenttään voi kirjoittaa ajan minuutteina ja sen perään tulee teksti "min"
   - Harjoituspäiväkirja alueella on "Takaisin"-nappi, josta pääsee edelliselle sivulle
   - Harjoituspäiväkirjalle on luotu oma taulu tietokantaan
+* Luotu WorkoutRepository- luokka vastaamaan harjoitusten tallentamisesta ja hakemisesta.
