@@ -14,20 +14,20 @@ Käyttäjärooleja sovelluksessa on alkuun normaalikäyttäjä ja mahdollisesti 
 
 ### Ennen kirjautumista
 
-* Käyttäjä voi luoda käyttäjätunnuksen
-  - Käyttäjätunnuksen tulee olla uniikki ja vähintään 3 merkkiä
-  - Salasanan tulee olla vähintään 8 merkkiä
-* Käyttäjä voi kirjautua järjestelmään
-  - Käyttäjätunnuksen ja salasanan tulee olla oikein.
-  - Vääristä käyttäjätunnuksista tulee ilmoitus ja kirjautuminen epäonnistuu
+* Käyttäjä voi luoda käyttäjätunnuksen  "tehty"
+  - Käyttäjätunnuksen tulee olla uniikki ja vähintään 3 merkkiä "tehty"
+  - Salasanan tulee olla vähintään 8 merkkiä  "tehty"
+* Käyttäjä voi kirjautua järjestelmään  "tehty"
+  - Käyttäjätunnuksen ja salasanan tulee olla oikein. "tehty"
+  - Vääristä käyttäjätunnuksista tulee ilmoitus ja kirjautuminen epäonnistuu  "tehty"
 
 ### Kirjautumisen jälkeen
 
-* Käyttäjälle tulee näkymä omista merkinnöistä, jos niitä on
+* Käyttäjälle tulee näkymä omista merkinnöistä, jos niitä on  "osittain tehty"
   - Harjoituksille, peleille ja kehityssuunnitelmalle omat osiot
-* Käyttäjä voi lisätä uuden harjoituksen ja määritellä harjoituksen tyypin
-  - Käyttäjä voi tallentaa harjoituksen keston, intensiteetin ja päivämäärän
-  - Käyttäjä voi kirjoittaa vapaamuotoisen tekstin päiväkirjaan
+* Käyttäjä voi lisätä uuden harjoituksen ja määritellä harjoituksen tyypin  "tehty"
+  - Käyttäjä voi tallentaa harjoituksen keston, intensiteetin ja päivämäärän  "tehty"
+  - Käyttäjä voi kirjoittaa vapaamuotoisen tekstin päiväkirjaan "tehty"
 * Käyttäjä voi lisätä uuden pelin ja merkitä tilastoja
   - Käyttäjä voi merkitä tilastoja, kuten maalit, syötöt ja peliaika
   - Käyttäjä voi merkitä vastustajan nimen ja pelin ajankohdan

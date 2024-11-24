@@ -13,6 +13,7 @@ Sovelluksen toiminta on testattu versiolla 3.10.12 , mutta sen tulisi toimia ver
 - [Vaatimusmäärittely](dokumentaatio/vaatimusmaarittely.md)
 - [Tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)
 - [Changelog](dokumentaatio/changelog.md)
+- [Arkkitehtuuri](dokumentaatio/arkkitehtuuri.md)
 
 ## Käyttöohjeet
 
