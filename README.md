@@ -4,6 +4,10 @@ Sovelluksen tarkoituksena on tarjota jalkapallopelaajalle erilaisia työkaluja
 seurata kehitystään, kuten harjoituspäiväkirja, pelisuoritusten seuranta ja kehityssuunnitelman luonti.
 Sovellusta on mahdollista käyttää useammalla rekisteröityneellä käyttäjällä, joilla on yksilölliset alueet omiin tietoihin.
 
+## Release
+
+[Release](https://github.com/F4U57O/ot-harjoitustyo/releases/tag/viikko5)
+
 ## Huomio Python-versiosta
 
 Sovelluksen toiminta on testattu versiolla 3.10.12 , mutta sen tulisi toimia versiolla 3.8 tai uudemmalla.
