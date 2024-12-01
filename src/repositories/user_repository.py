@@ -2,8 +2,8 @@ from database_connection import get_database_connection
 
 
 class UserRepository:
-    def __init__(self):
-        self.connection = get_database_connection()
+    def __init__(self, connection=None):
+        self.connection = connection or get_database_connection()
 
     def create_user(self, username, password):
         try:
@@ -12,8 +12,8 @@ class UserRepository:
                 "INSERT INTO users (username, password) VALUES (?, ?)", (username, password)
             )
             self.connection.commit()
-        except Exception as e:
-            print(f"Virhe käyttäjän luomisessa: {e}")
+        except Exception as exception:
+            print(f"Virhe käyttäjän luomisessa: {exception}")
             return False
         return True
 

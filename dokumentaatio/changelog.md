@@ -19,3 +19,16 @@
   - Harjoituspäiväkirja alueella on "Takaisin"-nappi, josta pääsee edelliselle sivulle
   - Harjoituspäiväkirjalle on luotu oma taulu tietokantaan
 * Luotu WorkoutRepository- luokka vastaamaan harjoitusten tallentamisesta ja hakemisesta.
+
+## Viikko 5
+* Sovelluksen kokoa muutettu isommaksi vastaamaan sen sisältöä
+* Kirjautunut käyttäjä voi lisätä pelitilastoja
+  - Vastustajan pystyy valitsemaan valmiista listasta
+  - Päivämäärän saa valittua kalenterinäkymästä
+  - Maalit, syötöt ja peliajan pystyy valitsemaan arvovalitsimella
+  - Arvosanan pystyy valitsemaan liukusäätimellä
+  - Palautteen voi kirjoittaa vapaamuotoisesti
+  - Pelitilastoissa näkyy maalit, syötöt ja peliaika yhteensä
+  - Pelitilastoissa näkyy arvosanojen keskiarvo
+  - Pelitilastoja voi poistaa yksi kerrallaan
+* Luotu GameStatsRepository- luokka vastaamaan tilastojen tallentamisesta, hakemisesta ja poistamisesta tietokannasta.

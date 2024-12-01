@@ -10,4 +10,6 @@
 |   21.11   |    7     | Pylintin käyttöönotto ja virheiden korjailu, harjoituspäiväkirjan toteutus, |
 |           |          | sovelluslogiikan ja käyttöliittymän eriyttäminen.                           |
 |   24.11   |    3     | Sovelluslogiikkakaavion luominen.                                           |
-|     yht.  |    30    |                                                                             |
+|   30.11   |    8     | Pelitilastojen toteutus, sovelluslogiikan parantaminen, tietokantataulun luominen |
+|   1.12    |    4     | Testien tekeminen ja korjaaminen. Testitietokannan parannus.                      |
+|     yht.  |    42    |                                                                                   |

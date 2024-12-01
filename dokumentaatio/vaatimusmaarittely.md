@@ -28,11 +28,11 @@ Käyttäjärooleja sovelluksessa on alkuun normaalikäyttäjä ja mahdollisesti 
 * Käyttäjä voi lisätä uuden harjoituksen ja määritellä harjoituksen tyypin  "tehty"
   - Käyttäjä voi tallentaa harjoituksen keston, intensiteetin ja päivämäärän  "tehty"
   - Käyttäjä voi kirjoittaa vapaamuotoisen tekstin päiväkirjaan "tehty"
-* Käyttäjä voi lisätä uuden pelin ja merkitä tilastoja
-  - Käyttäjä voi merkitä tilastoja, kuten maalit, syötöt ja peliaika
-  - Käyttäjä voi merkitä vastustajan nimen ja pelin ajankohdan
-  - Käyttäjällä on mahdollisuus arvioida pelisuoritustaan asteikolla 1-10
-  - Käyttäjällä on mahdollisuus antaa palaute omasta suorituksestaan
+* Käyttäjä voi lisätä uuden pelin ja merkitä tilastoja "tehty"
+  - Käyttäjä voi merkitä tilastoja, kuten maalit, syötöt ja peliaika "tehty"
+  - Käyttäjä voi merkitä vastustajan nimen ja pelin ajankohdan "tehty"
+  - Käyttäjällä on mahdollisuus arvioida pelisuoritustaan asteikolla 1-10 "tehty"
+  - Käyttäjällä on mahdollisuus antaa palaute omasta suorituksestaan "tehty"
 * Käyttäjä voi luoda tavoitteen
   - Käyttäjä voi päivittää tavoitteen tilan: käynnissä, suoritettu, ei suoritettu
 
