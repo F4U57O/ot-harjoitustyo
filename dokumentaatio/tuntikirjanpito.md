@@ -13,4 +13,5 @@
 |   30.11   |    8     | Pelitilastojen toteutus, sovelluslogiikan parantaminen, tietokantataulun luominen |
 |   1.12    |    4     | Testien tekeminen ja korjaaminen. Testitietokannan parannus.                      |
 |           |    2     | Linttien korjailua, Releasen luominen ja dokumentaatio                            |
-|     yht.  |    44    |                                                                                   |
+|   3.12    |    1     | Sekvenssikaavion luonti
+|     yht.  |    45    |                                                                                   |
