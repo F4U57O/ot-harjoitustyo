@@ -32,3 +32,13 @@
   - Pelitilastoissa näkyy arvosanojen keskiarvo
   - Pelitilastoja voi poistaa yksi kerrallaan
 * Luotu GameStatsRepository- luokka vastaamaan tilastojen tallentamisesta, hakemisesta ja poistamisesta tietokannasta.
+
+## Viikko 6
+* Kirjautunut käyttäjä voi lisätä tavoitteen
+  - Tavoitteen luonnin yhteydessä lisätään luonnin ajankohta
+  - Tavoite menee automaattisesti tilaan "käynnissä"
+* Käyttäjä voi päivittää tavoitteen tilan
+  - Tilan voi päivittää "suoritettu", joka näkyy vihreällä fontilla
+  - Tilan voi päivittää "ei suoritettu", joka näkyy punaisella fontilla
+  - Tilan päivityksen yhteydessä lisätään päivityksen ajankohta
+* Luotu GoalRepository- luokka vastaamaan tavoitteiden tallentamisesta ja tilan päivittämisestä tietokantaan.

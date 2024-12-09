@@ -4,10 +4,13 @@ from ui.login_view import LoginUI
 from ui.main_view import MainPageView
 from ui.workout_view import WorkoutUI
 from ui.game_stats_view import GameStatsUI
+from ui.goal_view import GoalUI
 from services.workout_service import WorkoutService
 from repositories.workout_repository import WorkoutRepository
 from services.game_stats_service import GameStatsService
 from repositories.game_stats_repository import GameStatsRepository
+from services.goal_service import GoalService
+from repositories.goal_repository import GoalRepository
 
 
 class MainApp:
@@ -45,7 +48,7 @@ class MainApp:
     def show_main_page(self, user):
         self.current_user = user
         main_page = MainPageView(
-            self.root, user, self.log_out, self.show_workout_window, self.show_game_stats_window)
+            self.root, user, self.log_out, self.show_workout_window, self.show_game_stats_window, self.show_goal_window)
         self.change_frame(main_page)
 
     def show_workout_window(self):
@@ -59,6 +62,12 @@ class MainApp:
         game_stats_view = GameStatsUI(
             self.root, game_stats_service, self.current_user, lambda: self.show_main_page(self.current_user))
         self.change_frame(game_stats_view)
+
+    def show_goal_window(self):
+        goal_service = GoalService(GoalRepository())
+        goal_view = GoalUI(self.root, goal_service, self.current_user,
+                           lambda: self.show_main_page(self.current_user))
+        self.change_frame(goal_view)
 
     def log_out(self):
         self.current_user = None

@@ -3,7 +3,6 @@ from database_connection import get_database_connection
 from entities.game_stats import GameStats
 
 
-
 class GameStatsRepository:
     def __init__(self, connection=None):
         self.connection = connection or get_database_connection()

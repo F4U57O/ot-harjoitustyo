@@ -33,8 +33,8 @@ Käyttäjärooleja sovelluksessa on alkuun normaalikäyttäjä ja mahdollisesti 
   - Käyttäjä voi merkitä vastustajan nimen ja pelin ajankohdan "tehty"
   - Käyttäjällä on mahdollisuus arvioida pelisuoritustaan asteikolla 1-10 "tehty"
   - Käyttäjällä on mahdollisuus antaa palaute omasta suorituksestaan "tehty"
-* Käyttäjä voi luoda tavoitteen
-  - Käyttäjä voi päivittää tavoitteen tilan: käynnissä, suoritettu, ei suoritettu
+* Käyttäjä voi luoda tavoitteen "tehty"
+  - Käyttäjä voi päivittää tavoitteen tilan: käynnissä, suoritettu, ei suoritettu "tehty"
 
 ## Jatkokehitysideoita
 

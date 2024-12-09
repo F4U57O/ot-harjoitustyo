@@ -1,4 +1,3 @@
-from database_connection import get_database_connection
 
 
 def drop_tables(connection):
@@ -7,6 +6,7 @@ def drop_tables(connection):
     cursor.execute('DROP TABLE IF EXISTS users;')
     cursor.execute('DROP TABLE IF EXISTS workouts;')
     cursor.execute('DROP TABLE IF EXISTS game_stats;')
+    cursor.execute('DROP TABLE IF EXISTS goals')
 
     connection.commit()
 
@@ -47,6 +47,18 @@ def create_tables(connection):
             FOREIGN KEY (user_id) REFERENCES users (id)
         )
     ''')
+
+    cursor.execute('''
+            CREATE TABLE IF NOT EXISTS goals (
+                   id INTEGER PRIMARY KEY AUTOINCREMENT,
+                   user_id INTEGER,
+                   goal TEXT NOT NULL,
+                   status TEXT CHECK(status IN ('käynnissä', 'suoritettu', 'ei suoritettu')) NOT NULL DEFAULT 'in progress',
+                   created_at TEXT,
+                   status_updated_at TEXT,
+                   FOREIGN KEY (user_id) REFERENCES users (id)
+            )
+            ''')
 
     connection.commit()
 
