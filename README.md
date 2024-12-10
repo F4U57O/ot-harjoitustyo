@@ -6,7 +6,7 @@ Sovellusta on mahdollista käyttää useammalla rekisteröityneellä käyttäjä
 
 ## Release
 
-[Release](https://github.com/F4U57O/ot-harjoitustyo/releases/tag/viikko5)
+[Release](https://github.com/F4U57O/ot-harjoitustyo/releases/tag/viikko6)
 
 ## Huomio Python-versiosta
 
