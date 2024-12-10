@@ -1,9 +1,29 @@
 
 class RegisterService:
+    """
+    Luokka Käyttäjien rekisteröintiin
+    """
+
     def __init__(self, user_repo):
+        """
+        Alustaa RegisterService-luokan
+
+        Args:
+            user_repo (UserRepository): Hallinnoi käyttäjätunnusten tallentamista ja hakemista.
+        """
         self.user_repo = user_repo
 
     def register_user(self, username, password):
+        """
+        Alustaa RegisterService-luokan
+
+        Args:
+            username (str): Uusi käyttäjätunnus
+            password (str): Uusi salasana
+
+        Returns:
+            Tuple, jossa totuusarvo ja viesti merkkijonona.
+        """
         if len(username) < 3:
             return False, "Käyttäjätunnuksen tulee olla vähintään 3 merkkiä"
         if len(password) < 8:

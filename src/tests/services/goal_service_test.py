@@ -33,9 +33,7 @@ class TestGoal(unittest.TestCase):
         goal = "aa"
 
         fail, message = self.goal.add_goal(
-            user_id, goal 
+            user_id, goal
         )
         self.assertFalse(fail)
         self.assertEqual(message, "Tavoitteen tulee olla vähintään 3 merkkiä.")
-
-    

@@ -16,4 +16,5 @@
 |   3.12    |    1     | Sekvenssikaavion luonti                                                           |
 |    9.12   |    8     | Tavotteiden toteutus, tietokantataulun luominen, testien tekeminen,               |
 |           |          | docstring-dokumentointi, linttien korjailu.                                       |
-|     yht.  |    53    |                                                                                   |
+|   10.12   |    7     | Docstring, arkkitehtuuri ja käyttöohje- dokumentointi                             |
+|     yht.  |    60    |                                                                                   |
