@@ -6,7 +6,7 @@ Sovellusta on mahdollista käyttää useammalla rekisteröityneellä käyttäjä
 
 ## Release
 
-[Release](https://github.com/F4U57O/ot-harjoitustyo/releases/tag/viikko6)
+[Release](https://github.com/F4U57O/ot-harjoitustyo/releases/tag/loppupalautus)
 
 ## Huomio Python-versiosta
 
@@ -19,6 +19,7 @@ Sovelluksen toiminta on testattu versiolla 3.10.12 , mutta sen tulisi toimia ver
 - [Changelog](dokumentaatio/changelog.md)
 - [Arkkitehtuuri](dokumentaatio/arkkitehtuuri.md)
 - [Käyttöohjeet](dokumentaatio/kayttoohje.md)
+- [Testausdokumentti](dokumentaatio/testaus.md)
 
 ## Käyttöohjeet
 

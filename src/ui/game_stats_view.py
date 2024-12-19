@@ -5,7 +5,22 @@ from tkcalendar import DateEntry
 
 
 class GameStatsUI(tk.Frame):
+    """
+    Käyttöliittymä pelitilastojen hallintaan.
+
+    Args:
+        tk.Frame: Tkinterin kehysluokka.
+    """
     def __init__(self, root, game_stats_service, user_id, go_back):
+        """
+        Alustaa GameStatsUI-luokan
+
+        Args:
+            root (Tk): Ikkuna kehykselle.
+            game_stats_service: Pelitilastojen käsittelyyn.
+            user_id (int): Tunniste käyttäjälle.
+            go_back: Palauttaa edellisen näkymän.
+        """
         super().__init__(root)
         self.game_stats_service = game_stats_service
         self.user_id = user_id
@@ -15,6 +30,9 @@ class GameStatsUI(tk.Frame):
         self.create_widgets()
 
     def create_widgets(self):
+        """
+        Luo widgetit.
+        """
         tk.Label(self, text="Pelitilastot").pack(pady=10)
 
         list_frame = tk.Frame(self)
@@ -77,6 +95,9 @@ class GameStatsUI(tk.Frame):
         back_button.pack(pady=10)
 
     def add_game_stats(self):
+        """
+        Lisää pelitilaston syötteen perusteella.
+        """
         opponent = self.opponent_combobox.get()
         date = self.date_entry.get()
         goals = int(self.goals_spinbox.get())
@@ -85,8 +106,18 @@ class GameStatsUI(tk.Frame):
         rating = self.rating_slider.get()
         feedback = self.feedback_entry.get()
 
+        game_stats = {
+            "opponent": opponent,
+            "date": date,
+            "goals": goals,
+            "assists": assists,
+            "play_time": play_time,
+            "rating": rating,
+            "feedback": feedback
+        }
+
         success, message = self.game_stats_service.add_game_stats(
-            id, self.user_id, opponent, date, goals, assists, play_time, rating, feedback
+            game_id=None, user_id=self.user_id, game_stats=game_stats
         )
 
         if success:
@@ -97,6 +128,9 @@ class GameStatsUI(tk.Frame):
             messagebox.showerror("Virhe", message)
 
     def refresh_list(self):
+        """
+        Päivittää pelitilastojen listan ja laskee yhteenvetotiedot.
+        """
         self.stats_list.delete(0, tk.END)
         stats = self.game_stats_service.get_game_stats(self.user_id)
         self.stat_ids = []
@@ -127,9 +161,21 @@ class GameStatsUI(tk.Frame):
         )
 
     def clear_inputs(self):
+        """
+        Tyhjentää palautekentän pelitilaston lisäämisen jälkeen.
+        """
         self.feedback_entry.delete(0, tk.END)
 
     def load_teams(self, filepath):
+        """
+        Lataa joukkueet tiedostosta.
+
+        Args:
+            filepath (str): Polku tiedostoon, jossa joukkueiden nimet.
+
+        Returns:
+            list[str]: Lista joukkueista.
+        """
         try:
             with open(filepath, "r") as file:
                 return [line.strip() for line in file if line.strip()]
@@ -137,6 +183,9 @@ class GameStatsUI(tk.Frame):
             return []
 
     def delete_selected_stat(self):
+        """
+        Poistaa pelitilaston listasta.
+        """
         selected_index = self.stats_list.curselection()
         if not selected_index:
             messagebox.showwarning("Varoitus", "Tilastoa ei valittuna")

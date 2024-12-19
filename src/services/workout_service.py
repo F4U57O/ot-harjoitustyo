@@ -25,7 +25,7 @@ class WorkoutService:
         Returns:
             Tuplen, jossa totuusarvo ja viesti merkkijonona.
         """
-        if len(activity) < 0:
+        if len(activity) < 1:
             return False, "Harjoitus puuttuu"
         self.workout_repo.add_workout(user_id, date, activity, duration)
         return True, "Harjoitus lisätty"

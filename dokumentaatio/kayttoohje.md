@@ -1,6 +1,6 @@
 # Käyttöohje
 
-Lataa projektin uusin [release](https://github.com/F4U57O/ot-harjoitustyo/releases/tag/viikko6) valitsemalla "Source code" joko .zip tai .tar.gz
+Lataa projektin uusin [release](https://github.com/F4U57O/ot-harjoitustyo/releases/tag/loppupalautus) valitsemalla "Source code" joko .zip tai .tar.gz
 Pura tiedosto haluamaasi hakemistoon.
 
 ## Ennen sovelluksen käynnistämistä
@@ -30,7 +30,6 @@ poetry run invoke start
 Sovelluksen etusivulta paina "Rekisteröidy"-nappia, josta pääset seuraavaan:
 
 ![register](./kuvat/register.png)
-
 
 ## Kirjautuminen
 
@@ -70,3 +69,8 @@ Voit luoda tavoitteita ja päivittää niiden tiloja:
 Täytä kentät ja paina "Lisää tavoite".
 Klikkaamalla tavoitetta voit päivittää sen tilan "käynnissä", "suoritettu" ja
 "ei suoritettu" valinnan jälkeen paina "Päivitä tila"
+
+## Lisätietoja
+
+Voit muokata pelitilastojen joukkuiden listaa lisäämällä ja poistamalla niitä /data/teams.txt tiedostosta
+ennen sovelluksen käynnistämistä.

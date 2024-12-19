@@ -6,7 +6,24 @@ from services.workout_service import WorkoutService
 
 
 class MainPageView(tk.Frame):
+    """
+    Käyttöliittymä sovelluksen pääsivulle.
+
+    Args:
+        tk.Frame: Tkinterin kehysluokka.
+    """
     def __init__(self, root, user, log_out_callback, show_workout, show_game_stats, show_goal):
+        """
+        Alustaa MainPageView-luokan.
+
+        Args:
+            root (Tk): Ikkuna kehykselle.
+            user (str): Käyttäjätunnus.
+            log_out_callback: Uloskirjautuimnen.
+            show_workout: Näyttää harjoituspäiväkirjan.
+            show_game_stats: Näyttää pelitilastot.
+            show_goal: Näyttää tavoitteet.
+        """
         super().__init__(root)
         self.user = user
         self.log_out_callback = log_out_callback
@@ -19,6 +36,9 @@ class MainPageView(tk.Frame):
         self.create_main_page()
 
     def create_main_page(self):
+        """
+        Luo pääsivun elementit.
+        """
         tk.Label(self, text=f"Tervetuloa, {self.user}!").pack(pady=10)
         workout_button = tk.Button(
             self, text="Harjoituspäiväkirja",
@@ -38,4 +58,7 @@ class MainPageView(tk.Frame):
         log_out_button.pack(pady=20)
 
     def log_out(self):
+        """
+        Mahdollistaa uloskirjautumisen.
+        """
         self.log_out_callback()

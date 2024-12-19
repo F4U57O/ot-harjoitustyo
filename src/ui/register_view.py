@@ -5,7 +5,20 @@ from repositories.user_repository import UserRepository
 
 
 class RegisterUI(tk.Frame):
+    """
+    Käyttöliittymä rekisteröinnille.
+
+    Args:
+        tk.Frame: Tkinterin kehysluokka.
+    """
     def __init__(self, root, app):
+        """
+        Alustaa RegisterUI-luokan.
+
+        Args:
+            root (Tk): Ikkuna kehykselle.
+            app (App): Pääluokka, jota käytetään näkymän vaihtamiseen.
+        """
         super().__init__(root)
         self.app = app
         self.user_repo = UserRepository()
@@ -13,6 +26,9 @@ class RegisterUI(tk.Frame):
         self.create_widgets()
 
     def create_widgets(self):
+        """
+        Luo widgetit.
+        """
         tk.Label(self, text="Käyttäjätunnus").pack()
         self.entry_username = tk.Entry(self)
         self.entry_username.pack()
@@ -30,6 +46,9 @@ class RegisterUI(tk.Frame):
         back_button.pack(pady=5)
 
     def register_user(self):
+        """
+        Käsittelee käyttäjän rekisteröitymisen.
+        """
         username = self.entry_username.get()
         password = self.entry_password.get()
         success, message = self.register.register_user(username, password)

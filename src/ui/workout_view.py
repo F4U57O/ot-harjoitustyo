@@ -4,7 +4,22 @@ import datetime
 
 
 class WorkoutUI(tk.Frame):
+    """
+    Käyttöliittymä harjoituspäiväkirjalle.
+
+    Args:
+        tk.Frame: Tkinterin kehysluokka.
+    """
     def __init__(self, root, workout_service, user_id, go_back):
+        """
+        Alustaa WorkoutUI-luokan.
+
+        Args:
+            root (Tk): Ikkuna kehykselle.
+            workout_service: Harjoituspäiväkirjan käsittelyyn.
+            user_id (int): Tunniste käyttäjälle.
+            go_back: Palauttaa päävalikkoon.
+        """
         super().__init__(root)
         self.workout_service = workout_service
         self.user_id = user_id
@@ -12,6 +27,9 @@ class WorkoutUI(tk.Frame):
         self.create_widgets()
 
     def create_widgets(self):
+        """
+        Luo widgetit.
+        """
         tk.Label(self, text="Harjoituspäiväkirja").pack(pady=10)
 
         self.workouts_list = tk.Listbox(self, height=10, width=50)
@@ -43,6 +61,9 @@ class WorkoutUI(tk.Frame):
         back_button.pack(pady=10)
 
     def add_workout(self):
+        """
+        Lisää harjoituksen käyttäjän päiväkirjaan.
+        """
         date = self.date_entry.get()
         activity = self.activity_entry.get()
         duration = self.duration_entry.get()
@@ -58,6 +79,9 @@ class WorkoutUI(tk.Frame):
             messagebox.showerror("Virhe", message)
 
     def refresh_list(self):
+        """
+        Päivittää listan käyttäjän harjoituksista.
+        """
         self.workouts_list.delete(0, tk.END)
         workouts = self.workout_service.get_workouts(self.user_id)
         for workout in workouts:
@@ -67,5 +91,8 @@ class WorkoutUI(tk.Frame):
         self.workouts_list.update_idletasks()
 
     def clear_inputs(self):
+        """
+        Tyhjentää syötekentät.
+        """
         self.activity_entry.delete(0, tk.END)
         self.duration_entry.delete(0, tk.END)

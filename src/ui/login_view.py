@@ -5,7 +5,20 @@ from repositories.user_repository import UserRepository
 
 
 class LoginUI(tk.Frame):
+    """
+    Käyttöliittymä kirjautumista varten.
+
+    Args:
+        tk.Frame: Tkinterin kehysluokka.
+    """
     def __init__(self, root, app):
+        """
+        Alustaa LoginUI-luokan.
+
+        Args:
+            root (Tk): Ikkuna kehykselle.
+            app (App): Pääluokka, jota käytetään näkymän vaihtamiseen.
+        """
         super().__init__(root)
         self.app = app
         self.user_repo = UserRepository()
@@ -13,6 +26,9 @@ class LoginUI(tk.Frame):
         self.create_widgets()
 
     def create_widgets(self):
+        """
+        Luo widgetit.
+        """
         tk.Label(self, text="Käyttäjätunnus").pack()
         self.entry_username = tk.Entry(self)
         self.entry_username.pack()
@@ -30,6 +46,9 @@ class LoginUI(tk.Frame):
         back_button.pack(pady=5)
 
     def login_user(self):
+        """
+        Käsittelee kirjautumisen syötteen perusteella.
+        """
         username = self.entry_username.get()
         password = self.entry_password.get()
 

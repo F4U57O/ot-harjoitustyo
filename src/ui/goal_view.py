@@ -3,7 +3,22 @@ from tkinter import messagebox, ttk
 
 
 class GoalUI(tk.Frame):
+    """
+    Käyttöliittymä tavoitteiden hallintaan.
+
+    Args:
+        tk.Frame: Tkinterin kehysluokka.
+    """
     def __init__(self, root, goal_service, user_id, go_back):
+        """
+        Alustaa GoalUI-luokan.
+
+        Args:
+            root (Tk): Ikkunalle kehys.
+            goal_service: Tavoitteiden käsittelyyn.
+            user_id (int): Tunniste käyttäjälle.
+            go_back: Palauttaa edelliseen näkymään
+        """
         super().__init__(root)
         self.goal_service = goal_service
         self.user_id = user_id
@@ -47,6 +62,9 @@ class GoalUI(tk.Frame):
         self.refresh_goals()
 
     def add_goal(self):
+        """
+        Lisää tavoitteen syötteen perusteella.
+        """
         goal = self.goal_entry.get()
         success, message = self.goal_service.add_goal(self.user_id, goal)
         messagebox.showinfo("Ilmoitus", message)
@@ -54,6 +72,12 @@ class GoalUI(tk.Frame):
             self.refresh_goals()
 
     def edit_status(self, event):
+        """
+        Tavoitteiden tilan muokkaaminen.
+
+        Args:
+            event: Käyttäjän tekemä tapahtuma.
+        """
         if self.status_combobox:
             self.status_combobox.destroy()
 
@@ -72,6 +96,9 @@ class GoalUI(tk.Frame):
         self.current_goal_id = goal_id
 
     def update_status(self):
+        """
+        Päivittää valitun tavoitteen tilan.
+        """
         if not self.current_goal_id or not self.status_combobox:
             messagebox.showinfo("Ilmoitus", "Valitse tila muokattavaksi!")
             return
@@ -91,6 +118,9 @@ class GoalUI(tk.Frame):
         self.current_goal_id = None
 
     def refresh_goals(self):
+        """
+        Päivittää tavoitteiden listan ja sen tilat.
+        """
         for item in self.goals_list.get_children():
             self.goals_list.delete(item)
         goals = self.goal_service.get_user_goals(self.user_id)

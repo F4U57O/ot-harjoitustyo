@@ -18,26 +18,26 @@ class GameStatsService:
         self.game_stats_repo = game_stats_repo
 
     def add_game_stats(
-            self, id, user_id, opponent, date, goals, assists, play_time, rating, feedback):
+            self, game_id, user_id, game_stats):
         """_summary_
 
         Args:
-            id (int): Yksilöllinen tunniste tilastolle
+            game_id (int): Yksilöllinen tunniste tilastolle
             user_id (int): Käyttäjän tunniste
             opponent (str): Vastustajan nimi
-            date (date): Pelin päivämäärä
-            goals (int): Maalien lukumäärä
-            assists (int): Syöttöpisteiden määrä
-            play_time (int): Peliaika minuutteina
-            rating (int): Pelin arvosana
-            feedback (str): Palaute tekstinä
+            game_stats (dict): Sisältää seuraavat:
+                date (date): Pelin päivämäärä
+                goals (int): Maalien lukumäärä
+                assists (int): Syöttöpisteiden määrä
+                play_time (int): Peliaika minuutteina
+                rating (int): Pelin arvosana
+                feedback (str): Palaute tekstinä
 
         Returns:
             Tuplen, jossa totuusarvo, sekä viesti merkkijonona.
         """
-        game_stats = GameStats(id, user_id, opponent,
-                               date, goals, assists, play_time, rating, feedback)
-        self.game_stats_repo.add_game_stats(game_stats)
+        game_stat = GameStats(game_id, user_id, game_stats)
+        self.game_stats_repo.add_game_stats(game_stat)
         return True, "Pelitilasto lisätty!"
 
     def get_game_stats(self, user_id):
