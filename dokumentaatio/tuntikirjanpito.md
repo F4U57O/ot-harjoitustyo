@@ -19,5 +19,5 @@
 | 10.12     | 7        | Docstring, arkkitehtuuri ja käyttöohje- dokumentointi                             |
 | 13.12     | 5        | Docstring, vaatimusmäärittely ja linttien korjailu                                |
 | 15.12     | 2        | Testausdokumentti                                                                 |
-| 19.12     | 2        | Docstring ja viimeistelyt                                                         |
-| yht.      | 69       |                                                                                   |
+| 19.12     | 3        | Docstring ja viimeistelyt                                                         |
+| yht.      | 70       |                                                                                   |
